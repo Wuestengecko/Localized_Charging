@@ -26,6 +26,7 @@ data:extend({
 		type = "technology",
 		name = "voltage-wireless-energy-distribution",
 		icon = "__base__/graphics/technology/electric-energy-distribution.png",
+		icon_size = 128,
 		effects = {
 			{
 				type = "unlock-recipe",
@@ -42,7 +43,7 @@ data:extend({
 			{
 				type = "unlock-recipe",
 				recipe = "localized-charging-pole-4",
-			}, 
+			},
 		},
 		prerequisites = {"electric-energy-distribution-2"},
 		unit = {

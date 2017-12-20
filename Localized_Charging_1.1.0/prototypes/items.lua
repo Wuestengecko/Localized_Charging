@@ -6,6 +6,7 @@ data:extend({
 		name = "localized-charging-pole-1",
 		localised_name = {'entity-name.localized-charging-pole-1'},
 		icon = "__Localized_Charging__/graphics/icons/localized-charging-pole.png",
+		icon_size = 32,
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy-pipe-distribution",
 		order = "a[energy]-z[localized-charging-pole-1]",
@@ -18,6 +19,7 @@ data:extend({
 		name = "localized-charging-pole-2",
 		localised_name = {'entity-name.localized-charging-pole-2'},
 		icon = "__Localized_Charging__/graphics/icons/localized-charging-pole.png",
+		icon_size = 32,
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy-pipe-distribution",
 		order = "a[energy]-z[localized-charging-pole-2]",
@@ -30,6 +32,7 @@ data:extend({
 		name = "localized-charging-pole-3",
 		localised_name = {'entity-name.localized-charging-pole-3'},
 		icon = "__Localized_Charging__/graphics/icons/localized-charging-pole.png",
+		icon_size = 32,
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy-pipe-distribution",
 		order = "a[energy]-z[localized-charging-pole-3]",
@@ -42,6 +45,7 @@ data:extend({
 		name = "localized-charging-pole-4",
 		localised_name = {'entity-name.localized-charging-pole-4'},
 		icon = "__Localized_Charging__/graphics/icons/localized-charging-pole.png",
+		icon_size = 32,
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy-pipe-distribution",
 		order = "a[energy]-z[localized-charging-pole-4]",
@@ -52,10 +56,11 @@ data:extend({
 		name = "electric-locomotive",
 		localised_name={'vehicles.electric-locomotive'},
 		icon = "__Localized_Charging__/graphics/icons/electric-locomotive.png",
+		icon_size = 32,
 		order = "a[train-system]-f[electric-locomotive]",
 		place_result = "electric-locomotive",
 	}),
-
+--[[
 	{
 		type = "item",
 		name = "test-battery-please-ignore",
@@ -93,4 +98,5 @@ data:extend({
 		},
 		categories = {"armor"}
 	},
+]]
 })
