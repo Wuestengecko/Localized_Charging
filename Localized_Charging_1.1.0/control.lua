@@ -331,7 +331,7 @@ script.on_event(defines.events.on_entity_died, function(event)
 	on_entity_deleted(event.entity)
 end)
 
-script.on_event(defines.events.on_preplayer_mined_item, function(event)
+script.on_event(defines.events.on_pre_player_mined_item, function(event)
 	on_entity_deleted(event.entity)
 end)
 
