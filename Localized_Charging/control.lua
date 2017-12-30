@@ -7,24 +7,24 @@ end)
 
 local charging_info = {
 	["localized-charging-pole-1"] = {
-  		['interface'] = 'localized-charging-pole-interface-1',
-  		['range'] = 10,
-  		['efficiency'] = 0.5,
-  	},
-  	["localized-charging-pole-2"] = {
-  		['interface'] = 'localized-charging-pole-interface-2',
-  		['range'] = 10,
-  		['efficiency'] = 0.5,
-  	},
-  	["localized-charging-pole-3"] = {
-  		['interface'] = 'localized-charging-pole-interface-3',
-  		['range'] = 10,
-  		['efficiency'] = 0.5,
-  	},
-  	["localized-charging-pole-4"] = {
-  		['interface'] = 'localized-charging-pole-interface-4',
-  		['range'] = 10,
-  		['efficiency'] = 0.5,
+		['interface'] = 'localized-charging-pole-interface-1',
+		['range'] = 10,
+		['efficiency'] = 0.5,
+	},
+	["localized-charging-pole-2"] = {
+		['interface'] = 'localized-charging-pole-interface-2',
+		['range'] = 10,
+		['efficiency'] = 0.5,
+	},
+	["localized-charging-pole-3"] = {
+		['interface'] = 'localized-charging-pole-interface-3',
+		['range'] = 10,
+		['efficiency'] = 0.5,
+	},
+	["localized-charging-pole-4"] = {
+		['interface'] = 'localized-charging-pole-interface-4',
+		['range'] = 10,
+		['efficiency'] = 0.5,
 	},
 }
 
@@ -47,12 +47,12 @@ remote.add_interface('Localized_Charging', {
 		end
 		local vehicle = game.entity_prototypes[name]
 		if (vehicle ~= nil) and ((vehicle.type == 'car') or (vehicle.type == 'locomotive')) then
-				electric_vehicles[name] = true
-				return true
+			electric_vehicles[name] = true
+			return true
 		end
 		return false
 	end,
-    --Handle entity replacement by AAI Programmable Vehicles
+	--Handle entity replacement by AAI Programmable Vehicles
 	on_entity_replaced = function(event)
 		for k, vehicle_info in pairs(global.vehicles) do
 			local vehicle = vehicle_info.vehicle
@@ -344,18 +344,18 @@ end)
 -- which vehicle stopped driving
 -- this is for tanks, jets, etc
 --
--- script.on_event(defines.events.on_player_driving_changed_state, function(event)
--- 	local player = game.players[event.player_index]
+--script.on_event(defines.events.on_player_driving_changed_state, function(event)
+--	local player = game.players[event.player_index]
 
--- 	if(player.vehicle == nil) then
--- 		return
--- 	end
+--	if(player.vehicle == nil) then
+--		return
+--	end
 
--- 	local entity = player.vehicle
+--	local entity = player.vehicle
 
--- 	if(entity.name == 'electric-locomotive') then
--- 		local current = entity.energy
--- 		entity.energy = entity.energy + 1000
--- 		game.print('added: ' .. tostring(entity.energy - current))
--- 	end
--- end)
+--	if(entity.name == 'electric-locomotive') then
+--		local current = entity.energy
+--		entity.energy = entity.energy + 1000
+--		game.print('added: ' .. tostring(entity.energy - current))
+--	end
+--end)
