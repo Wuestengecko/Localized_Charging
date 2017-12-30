@@ -100,7 +100,14 @@ script.on_event(defines.events.on_tick, function(event)
 
 		if(not vehicle.valid) then
 			table.insert(remove, k)
-		elseif(vehicle.grid ~= nil) and (vehicle_info.battery_fueling_enabled) then
+			break
+		end
+
+		local has_burner_fuel = false
+		if(vehicle.burner ~= nil) and (vehicle.burner.inventory ~= nil) and (not vehicle.burner.inventory.is_empty() or vehicle.burner.remaining_burning_fuel > 0) then
+			has_burner_fuel = true
+		end
+		if(vehicle.grid ~= nil) and (vehicle_info.battery_fueling_enabled) and (not has_burner_fuel) then
 			local grid = vehicle.grid
 			local available_power = grid.available_in_batteries
 			local current_power = vehicle.energy
